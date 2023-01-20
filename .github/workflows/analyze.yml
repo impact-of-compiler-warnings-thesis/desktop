@@ -33,7 +33,8 @@ jobs:
                            libqt5websockets5-dev \
                            libsqlite3-dev \
                            libssl-dev \
-                           libzip-dev
+                           libzip-dev \
+                           libkf5*-dev
       - name: Install Qt
         uses: jurplel/install-qt-action@v3
         with:
