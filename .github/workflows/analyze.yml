@@ -22,14 +22,10 @@ jobs:
         run: |
           sudo apt update
           sudo apt install ninja-build \
-                           qt5-default \
                            openssl \
                            shared-mime-info \
                            zlib1g-dev \
                            sqlite3 \
-                           qtbase5-private-dev \
-                           qtdeclarative5-dev \
-                           qtwebengine5-dev \
                            qt5keychain-dev \
                            qttools5-dev \
                            qtquickcontrols2-5-dev \
@@ -38,6 +34,11 @@ jobs:
                            libsqlite3-dev \
                            libssl-dev \
                            libzip-dev
+      - name: Install Qt
+        uses: jurplel/install-qt-action@v3
+        with:
+          version: 5.15.*
+          modules: qtwebengine
       - name: Generate build files
         run: |
           mkdir build && cd build
