@@ -26,6 +26,7 @@ jobs:
                            shared-mime-info \
                            zlib1g-dev \
                            sqlite3 \
+                           inkscape \
                            qt5keychain-dev \
                            qttools5-dev \
                            qtquickcontrols2-5-dev \
